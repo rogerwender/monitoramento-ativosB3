@@ -4,7 +4,7 @@ import pandas as pd
 import plotly.express as px
 
 st.title("Monitoramento de Ativos B3")
-ticker = st.text_input("Digite o Ticker (ex: MXRF11, PETR4)", value="MXRF11")
+ticker = st.text_input("Digite o Ticker (ex: BBAS3, CXSE3)", value="BBAS3")
 token = st.secrets["BRAPI_TOKEN"]
 
 if st.button("Analisar Ativo"):
