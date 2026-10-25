@@ -8,7 +8,7 @@ ticker = st.text_input("Digite o Ticker (ex: MXRF11, PETR4)", value="MXRF11").up
 token = st.secrets["BRAPI_TOKEN"]
 
 if st.button("Analisar Ativo"):
-    url = f"https://brapi.dev/api/quote/{ticker}?range=1mo&interval=1d&token={token}"
+    url = f"[https://brapi.dev/api/quote/](https://brapi.dev/api/quote/){ticker}?range=1mo&interval=1d&dividends=true&token={token}"
     response = requests.get(url).json()
     
     if 'results' in response:
