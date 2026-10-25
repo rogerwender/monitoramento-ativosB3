@@ -9,7 +9,7 @@ token = st.secrets["BRAPI_TOKEN"]
 
 if st.button("Analisar Ativo"):
     # Adição dos parâmetros dividends=true e fundamental=true
-    url = f"https://brapi.dev/api/quote/{ticker}?range=1mo&interval=1d&dividends=true&fundamental=true&token={token}"
+    url = f"https://brapi.dev/api/quote/{ticker}?range=1mo&interval=1d&token={token}"
     response = requests.get(url).json()
     
     if 'results' in response:
